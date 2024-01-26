@@ -147,6 +147,45 @@ input:checked + .slider:before {
     font-size:11px;
 }
 
+/* Checkout Page Styles */
+#selected-products-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#selected-products-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#selected-products-list li button {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#selected-products-list li button:hover {
+    background-color: #ff3333;
+}
+
+#total-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* General Styles */
+button:focus {
+    outline: none;
+}
 
 
 
