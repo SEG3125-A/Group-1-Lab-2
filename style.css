@@ -75,7 +75,7 @@ body {
 
 .preferenceHeader{
   text-align: center;
-  margin-left: -28%; /* Adjust the negative margin as needed */
+  margin-right: min(48%,480px);
 }
 
 .foodPreference {
@@ -86,7 +86,9 @@ body {
         margin-bottom: 20px;
         padding-left: 20px;
         padding-right: 20px;
-        width: 30%;
+        width: 50%;
+        max-width: 500px;
+        min-width: 200px;
         background-color: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -101,57 +103,48 @@ body {
     border-top: 1px solid rgba(128, 128, 128, 0.25);
 }
 
-
-
-
-
-/* Styling for the toggle sliders */
 .toggle-slider {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Spread items evenly */
-  margin-bottom: 15px; /* Add some spacing between sliders */
+  justify-content: space-between;
+  margin-bottom: 15px;
   margin-top: 15px;
 }
 
-/* Hide the default checkbox */
 .hidden {
   display: none;
 }
 
-/* Styling for the slider */
 .slider {
   position: relative;
   display: inline-block;
-  width: 40px; /* Set a smaller width */
-  height: 20px; /* Set a smaller height */
+  min-width: 40px;
+  height: 20px;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.4s; /* Add transition for smooth color change */
-  margin-left: 5px; /* Add some spacing between label and slider */
+  transition: background-color 0.4s;
+  margin-left: 5px;
 }
 
-/* Styling for the slider knob */
 .slider:before {
   position: absolute;
   content: "";
-  height: 16px; /* Set a smaller height */
-  width: 16px; /* Set a smaller width */
-  left: 2px; /* Adjust positioning */
-  top: 2px; /* Adjust positioning */
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  top: 2px;
   background-color: white;
   border-radius: 50%;
-  transition: transform 0.4s; /* Add transition for smooth knob movement */
+  transition: transform 0.4s;
 }
 
-/* Slide the knob to the right when the checkbox is checked */
 input:checked + .slider:before {
-  transform: translateX(20px); /* Adjust for the smaller width of the slider */
+  transform: translateX(20px);
 }
 
 .toggle-slider small{
     color: grey;
     font-size:11px;
-
 }
+
 
