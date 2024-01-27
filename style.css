@@ -188,5 +188,19 @@ button:focus {
 }
 
 
+footer {
+    text-align: right;
+    margin-top: 200px; /* or any color you prefer */
+}
+
+.signature {
+    text-align: right;
+    margin-top: 20px; 
+    font-style: italic; 
+    background-image: linear-gradient(to left, #553c9a, #ee4b2b);
+    background-clip: text;
+    color: transparent;
+}
+
 
 

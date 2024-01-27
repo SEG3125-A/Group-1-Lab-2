@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var productContainer = document.getElementById('productContainer');
     // retrieves product list from local storage
     var products = JSON.parse(localStorage.getItem('filteredProducts'));
+    // adds items selected into cart from local storage
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // created the function to add to put in cart
+    function addToCart(product) {
+        cart.push({ productName: product.name, price: `$${product.price.toFixed(2)}`});
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }
 
     // looping through product list using forEach()
     if (products && products.length > 0) {
@@ -26,6 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
             var selectButton = document.createElement('button');
             selectButton.className = 'select-button';
             selectButton.textContent = 'Select';
+            selectButton.addEventListener('click', function(){
+                addToCart(product);
+            });
+            
+
 
             itemDiv.appendChild(nameDiv);
             itemDiv.appendChild(priceP);

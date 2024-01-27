@@ -10,14 +10,6 @@ var products = [
 
   },
   {
-    name: "Beef",
-    vegetarian: false,
-    glutenFree: false,
-    organic: true,
-    id: "beef",
-    price: 12.99
-  },
-  {
     name: "Lettuce",
     vegetarian: true,
     glutenFree: true,
@@ -34,12 +26,28 @@ var products = [
     price: 4.99
   },
   {
-    name: "Cake",
-    vegetarian: true,
-    glutenFree: false,
+    name: "Oatmeal",
+    vegetarian: false,
+    glutenFree: true,
     organic: false,
-    id: "cake",
-    price: 10.00
+    id: "oats",
+    price: 4.99
+  },
+  {
+    name: "Orange Juice",
+    vegetarian: true,
+    glutenFree: true,
+    organic: false,
+    id: "oran",
+    price: 5.45
+  },
+  {
+    name: "Nuts",
+    vegetarian: false,
+    glutenFree: true,
+    organic: false,
+    id: "nuts",
+    price: 7.50
   },
   {
     name: "Eggs",
@@ -58,28 +66,20 @@ var products = [
     price: 10.00
   },
   {
-    name: "Oatmeal",
-    vegetarian: false,
-    glutenFree: true,
-    organic: false,
-    id: "oats",
-    price: 4.99
-  },
-  {
-    name: "Nuts",
-    vegetarian: false,
-    glutenFree: true,
-    organic: false,
-    id: "nuts",
-    price: 7.50
-  },
-  {
-    name: "Orange Juice",
+    name: "Cake",
     vegetarian: true,
-    glutenFree: true,
+    glutenFree: false,
     organic: false,
-    id: "oran",
-    price: 5.45
+    id: "cake",
+    price: 10.00
+  },
+  {
+    name: "Beef",
+    vegetarian: false,
+    glutenFree: false,
+    organic: true,
+    id: "beef",
+    price: 12.99
   },
 ]
 
