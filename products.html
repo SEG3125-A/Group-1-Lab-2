@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
     <title>GrocerKing</title>
     <link rel="stylesheet" href="style.css">
-    <script src="products.js"></script>
+
     </head>
 
 
@@ -19,58 +19,11 @@
             </ul>
         </div>
 
-        <div class="products-container">
-            <div class="item" data-category="Organic">
-                <div>Banana</div>
-                <p class="price">$4.99</p>
-                <button class="select-button">Select</button>
-            </div>
-            <div class="item" data-category="Vegetarian">
-                <div>Oatmeal</div>
-                <p class="price">$2.99</p>
-                <button class="select-button">Select</button>
-            </div>
-            <div class="item" data-category="Gluten Free">
-                <div>Orange Juice</div>
-                <p class="price">$3.99</p>
-                <button class="select-button">Select</button>
-            </div>
-            <div class="item" data-category="Gluten Free">
-                <div>Beef</div>
-                <p class="price">$8.99</p>
-                <button class="select-button">Select</button>
-            </div>
-            <div class="item" data-category="Organic">
-                <div>Eggs</div>
-                <p class="price">$2.99</p>
-                <button class="select-button">Select</button>
-            </div>
-            <div class="item" data-category="Vegetarian">
-                <div>Milk</div>
-                <p class="price">$3.99</p>
-                <button class="select-button">Select</button>
-            </div>
-            <div class="item" data-category="Gluten Free">
-                <div>Bread</div>
-                <p class="price">$5.99</p>
-                <button class="select-button">Select</button>
-            </div>
-            <div class="item" data-category="Organic">
-                <div>Lettuce</div>
-                <p class="price">$1.99</p>
-                <button class="select-button">Select</button>
-            </div>
-            <div class="item" data-category="Vegetarian">
-                <div>Nuts</div>
-                <p class="price">$6.99</p>
-                <button class="select-button">Select</button>
-            </div>
-            <div class="item" data-category="Vegetarian">
-                <div>Milk Chocolate</div>
-                <p class="price">$3.99</p>
-                <button class="select-button">Select</button>
-            </div>
+        <div class="products-container" id="productContainer">
+
         </div>
+        <!--- This script needs to be loaded after the products container otherwise this will not work! --->
+        <script src="products.js"></script>
         
 
     </body>

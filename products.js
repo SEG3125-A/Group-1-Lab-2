@@ -1,39 +1,41 @@
-document.addEventListener('DOMContentLoaded', function () {
-    
-    applyFilters();
-    const selectButtons = document.querySelectorAll('.select-button');
+// re-did entire products script
+// essentially this just is supposed to take the products from the storage,
+// and then display them using the style created using createElement function
+document.addEventListener('DOMContentLoaded', function() {
+    // getting product container
+    var productContainer = document.getElementById('productContainer');
+    // retrieves product list from local storage
+    var products = JSON.parse(localStorage.getItem('filteredProducts'));
 
-    selectButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            const item = button.closest('.item');
-            const productName = item.querySelector('div').textContent;
-            const price = item.querySelector('.price').textContent;
+    // looping through product list using forEach()
+    if (products && products.length > 0) {
+        products.forEach(function(product) {
 
-            // Retrieve the current cart from localStorage or initialize it if not existing
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            // this follows the format you guys created, except using the
+            var itemDiv = document.createElement('div');
+            itemDiv.className = 'item';
+            itemDiv.id = product.id;
 
-            // Add the selected product to the cart
-            cart.push({ productName, price });
+            var nameDiv = document.createElement('div');
+            nameDiv.textContent = product.name;
 
-            // Save the updated cart back to localStorage
-            localStorage.setItem('cart', JSON.stringify(cart));
+            var priceP = document.createElement('p');
+            priceP.className = 'price';
+            priceP.textContent = `$${product.price.toFixed(2)}`;
+
+            var selectButton = document.createElement('button');
+            selectButton.className = 'select-button';
+            selectButton.textContent = 'Select';
+
+            itemDiv.appendChild(nameDiv);
+            itemDiv.appendChild(priceP);
+            itemDiv.appendChild(selectButton);
+
+            productContainer.appendChild(itemDiv);
         });
-    });
+    } else {
+        // this should never be reached since with all combinations of selections there will be at least one item
+        productContainer.textContent = 'No products available';
+    }
 });
 
-function applyFilters() {
-    var products = document.querySelectorAll('.products-container .item');
-    var filters = {
-        'Vegetarian': localStorage.getItem('vegetarianChecked') === 'true',
-        'Gluten Free': localStorage.getItem('glutenFreeChecked') === 'true',
-        'Organic': localStorage.getItem('organicChecked') === 'true'
-    };
-
-    products.forEach(function (product) {
-        var category = product.dataset.category;
-        var shouldBeVisible = !filters[category] || filters[category] === true;
-        product.style.display = shouldBeVisible ? '' : 'none';
-    });
-
-    
-}
